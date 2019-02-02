@@ -1,5 +1,9 @@
 // Your code goes here
 
+let nav = document.querySelector('header');
+
+nav.style.zIndex = '1';
+
 let button = document.querySelectorAll('.btn');
 
 button.forEach(function(btn){
@@ -12,6 +16,7 @@ let navlink = document.querySelectorAll('.nav-link');
 navlink.forEach(function(link) {
     link.addEventListener('mouseover', (event) => {event.target.style.color = 'limegreen'});
     link.addEventListener('mouseout', (event) => {event.target.style.color = 'black'});
+    link.addEventListener('click', (event) => {event.preventDefault()})
 })
 
 let topPic = document.querySelector('.intro img');
@@ -38,4 +43,6 @@ paragraph.forEach(function(p){
 let header = document.querySelector('h1');
 
 header.addEventListener('contextmenu', (event) => {event.target.style.transform = 'scaleX(1.5)'})
+
+
 
