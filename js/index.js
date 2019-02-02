@@ -45,7 +45,6 @@ let text = document.querySelectorAll('.text-content');
 
 text.forEach(function(x){
     x.addEventListener('copy', (event) => {event.target.style.color = "pink"
-    event.stopPropagation();
 })
 })
 
