@@ -37,12 +37,19 @@ let paragraph = document.querySelectorAll('p');
 
 paragraph.forEach(function(p){
     p.addEventListener('wheel', (event) => {event.target.style.transform = 'scaleY(1.2)'})
-    p.addEventListener('copy', (event) => {event.target.style.visibility = 'hidden'})
+    p.addEventListener('copy', (event) => {event.target.style.color = 'white'
+    event.stopPropagation()})
+})
+
+let text = document.querySelectorAll('.text-content');
+
+text.forEach(function(x){
+    x.addEventListener('copy', (event) => {event.target.style.color = "pink"
+    event.stopPropagation();
+})
 })
 
 let header = document.querySelector('h1');
 
 header.addEventListener('contextmenu', (event) => {event.target.style.transform = 'scaleX(1.5)'})
-
-
 
